@@ -1,0 +1,15 @@
+### Maven template
+target/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+
+# IntelliJ project files
+.idea
+*.iml
+gen
+
+
