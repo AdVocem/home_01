@@ -1,0 +1,39 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Login into mailbox">
+	<test name="Login into mail.ru mailbox">
+		<parameter name="login"  value="test_123456_qwerty"/>
+		<parameter name="password"  value="123asdf"/>
+		<parameter name="baseURL"  value="https://mail.ru/"/>
+		<parameter name="loginNameID"  value="Login"/>
+		<parameter name="passNameID"  value="Password"/>
+		<parameter name="submitClassID"  value="mailbox__auth__button"/>
+		<parameter name="loggedID"  value="//i[@id='PH_user-email']"/>
+		<classes>
+			<class name="tests.mailbox_login"></class>
+		</classes>
+	</test>
+	<test name="Login into yandex.ru mailbox">
+		<parameter name="login"  value="test123456qwerty.test"/>
+		<parameter name="password"  value="!@#qwe123"/>
+		<parameter name="baseURL"  value="https://mail.yandex.ru/"/>
+		<parameter name="loginNameID"  value="login"/>
+		<parameter name="passNameID"  value="passwd"/>
+		<parameter name="submitClassID"  value="nb-group-start"/>
+		<parameter name="loggedID"  value="//div[@class='mail-User-Name']"/>
+		<classes>
+			<class name="tests.mailbox_login"></class>
+		</classes>
+	</test>
+	<test name="Login into rambler.ru mailbox">
+		<parameter name="login"  value="test_123456_qwerty"/>
+		<parameter name="password"  value="123asdf"/>
+		<parameter name="baseURL"  value="https://mail.rambler.ru/"/>
+		<parameter name="loginNameID"  value="login"/>
+		<parameter name="passNameID"  value="password"/>
+		<parameter name="submitClassID"  value="form-button_submit"/>
+		<parameter name="loggedID"  value="//span[@class='rambler-topline__user-name']"/>
+		<classes>
+			<class name="tests.mailbox_login"></class>
+		</classes>
+	</test>
+</suite>
